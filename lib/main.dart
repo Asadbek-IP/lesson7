@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lesson7/pages/bottom_page.dart';
 import 'package:lesson7/pages/custom_button.dart';
 import 'package:lesson7/pages/decoration_page.dart';
 import 'package:lesson7/pages/form_fielt.dart';
 import 'package:lesson7/pages/gradient_page.dart';
+import 'package:lesson7/pages/silver_page.dart';
+import 'package:lesson7/pages/speed_dial_page.dart';
 import 'package:lesson7/pages/text_form_page.dart';
 
 main(){
@@ -20,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FormFieltPage(),
+      home: SilverPage(),
     );
   }
 }

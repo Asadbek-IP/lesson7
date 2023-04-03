@@ -12,8 +12,9 @@ class _FormFieltPageState extends State<FormFieltPage> {
   String? password;
 
   final _key = GlobalKey<FormState>();
-
   
+  bool isVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +34,19 @@ class _FormFieltPageState extends State<FormFieltPage> {
                   onSaved: (newValue) => email = newValue,
                 ),
                 TextFormField(
+                  
+                  obscureText: isVisible,
                   validator: (kiritilganParol) => kiritilganParol!.length >= 6
                       ? null
                       : "6 tadan ko'p belgi kiriting",
-                  decoration: const InputDecoration(label: Text("Password")),
+                  decoration:  InputDecoration(label: const Text("Password"),
+                  suffixIcon: IconButton(onPressed: (){
+                    setState(() {
+                      
+                      isVisible=true;
+                    });
+                  }, icon: const Icon(Icons.visibility))
+                  ),
                   onSaved: (newValue) => password = newValue,
                 ),
                 const SizedBox(
